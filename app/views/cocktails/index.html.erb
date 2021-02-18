@@ -1,3 +1,9 @@
-<h1>All cocktails</h1>
+<div>
+<h1>Cocky Cocktails</h1>
 
-<%= Cocktail.all %>
+<% @cocktails.each do | cocktail | %>
+<%= cocktail.name %>
+<%= link_to "Go to", cocktails_path(cocktail) %>
+<% end %>
+</div>
+
