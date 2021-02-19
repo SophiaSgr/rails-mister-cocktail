@@ -1,15 +1,26 @@
+  <div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1529604278261-8bfcdb00a7b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTgwOTN8MHwxfHNlYXJjaHw5fHxiYXJ8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=1080);">
+    <div class="container">
+      <h1>COCKTAILS</h1>
+      <br>
+      <%= link_to "ADD COCKTAIL", new_cocktail_path, class: "btn-grad" %>
+    </div>
+  </div>
+
 <div class="container">
-<h1>Cocky Cocktails</h1>
 
-<ol>
-  <% @cocktails.each do | cocktail | %>
-    <li>
-      <%= cocktail.name %>
-      <%= link_to "Go to", cocktail_path(cocktail) %>
-    </li>
-  <% end %>
-</ol>
+    <% @cocktails.each do | cocktail | %>
+
+
+
+
+      <div class="card d-inline-flex m-5 p-10" style="width: 18rem;">
+        <img src="..." class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <p class="card-text"></p>
+          <a><%= link_to "MAKE ME", cocktail_path(cocktail), class: "btn btn-outline-dark" %></a>
+        </div>
+      </div>
+    <% end %>
 </div>
-
-
 
