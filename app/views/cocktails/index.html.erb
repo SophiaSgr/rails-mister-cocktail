@@ -1,9 +1,15 @@
 <div class="container">
 <h1>Cocky Cocktails</h1>
 
-<% @cocktails.each do | cocktail | %>
-<%= cocktail.name %>
-<%= link_to "Go to", cocktail_path(cocktail) %>
-<% end %>
+<ol>
+  <% @cocktails.each do | cocktail | %>
+    <li>
+      <%= cocktail.name %>
+      <%= link_to "Go to", cocktail_path(cocktail) %>
+    </li>
+  <% end %>
+</ol>
 </div>
+
+
 
